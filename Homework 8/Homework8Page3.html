@@ -1,0 +1,94 @@
+<html>
+    <head> 
+        <title>Homework 6 Page 3</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+    .header{
+    color: lightsalmon;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+#button{
+    color: coral;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+}
+input[type="radio"] {
+    accent-color: coral;
+}
+#ToA{
+    color: coral;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+}
+</style>
+ <script>
+    function check()
+   {
+        var firstName = document.getElementById("fName").value;
+        var lastName = document.getElementById("lName").value;
+        var checkyes = document.getElementById("checkyes");
+        var checkno = document.getElementById("checkno")
+        var ToAmessage = document.getElementById("ToAmessage");
+
+        if(firstName == "")
+    {
+        document.getElementById("fName").style.backgroundColor = "coral";
+        document.getElementById("fName").focus();
+        document.getElementById("fNameInput").innerHTML = "* Tell me your first name.";
+        document.getElementById("fNameInput").style.color = "coral";
+    }
+    if(lastName == "")
+    {
+        document.getElementById("lName").style.backgroundColor = "coral";
+        document.getElementById("lName").focus();
+        document.getElementById("lNameInput").innerHTML = "* Tell me your last name.";
+        document.getElementById("lNameInput").style.color = "coral";
+    }
+    if (checkyes.checked)
+    {
+        ToAmessage.innerHTML = "Thank You";
+    } else if(checkno.checked) {
+        ToAmessage.innerHTML = ":(";
+    } else {
+        ToAmessage.innerHTML = "Please Check a Box"
+    }
+    }
+</script>
+</head>
+    <body>
+    <h1 class="header">Contacts</h1>
+    <p></p>
+    
+    <p>First Name: <input type="text" id="fName">&nbsp;<span id="fNameInput"></span></p>
+    <br>
+    <p>Last Name: <input type="text" id="lName">&nbsp;<span id="lNameInput"></span></p>
+    
+    <br>
+    <h3><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="header" id="ToA">Terms of Agreement</a></h3>
+    <input id="checkyes" type="checkbox" name="Yes" value="Yes">Yes, I agree<br>
+    <input id="checkno" type="checkbox" name="No" value="No">Nah.<br>
+   <div id="ToAmessage" style="color:coral"></div>
+    <p><h3 class="header">Are You Sure?</h3></p>
+    <input id="button" type="radio" name="Answer" value="Absolutely">Absolutely<br>
+    <input id="button" type="radio" name="Answer" value="Yeah,sure">Yeah, sure<br>
+    <input id="button" type="radio" name="Answer" value="Why not">Why not<br>
+    <input id="button" type="radio" name="Answer" value="I guess">I guess<br>
+    <input id="button" type="radio" name="Answer" value="Nevermind">Nevermind<br>
+    <input id="button" type="radio" name="Answer" value="Probably not">Probably Not<br>
+    <input id="button" type="radio" name="Answer" value="Nope">Nope<br>
+    <input id="button" type="radio" name="Answer" value="Definitely Not">Definitely Not<br>
+    <input id="button" type="radio" name="Answer" value="Maybe I should">Maybe I should double check<br>
+    <br>
+    <button id="SubmitButton" type="button" class="btn btn-danger" onclick="check();">Submit To Thy Data Collection Overlords</button>
+    </form>
+    <br>
+    <h3 class="header">Other Pages:</h3>
+<a id="button" href="Homework8Page1.html">Page 1!</a>
+<p>
+<a id="button" href="Homework8Page2.html">Page 2!</a>
+</body>
+</html>
